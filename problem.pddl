@@ -1,4 +1,4 @@
-(define (problem ProblemaAmbulancia) (:domain DominioAmbulancia)
+(define (problem problemaambulancia) (:domain dominioambulancia)
 (:objects 
     ambulancia1 - ambulancia
     paciente1 paciente2 - paciente
@@ -28,6 +28,4 @@
     (descargado paciente2)
 ))
 
-;un-comment the following line if metric is needed
-;(:metric minimize (???))
 )

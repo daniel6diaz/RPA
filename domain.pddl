@@ -1,8 +1,8 @@
-;Header and description
 
-(define (domain DominioAmbulancia)
 
-;remove requirements that are not needed
+(define (domain dominioambulancia)
+
+
 (:requirements :strips :fluents  :typing :negative-preconditions )
 
 (:types 
@@ -10,7 +10,7 @@
 )
 
 
-(:predicates ;todo: define predicates here
+(:predicates 
    
     (camino ?locOrigen - localizacion ?locDestino - localizacion)
     (enloc ?pct - paciente ?loc - localizacion)

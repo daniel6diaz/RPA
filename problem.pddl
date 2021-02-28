@@ -6,6 +6,7 @@
     l1 l2 l3 l4 - localizacion
 )
 (:init
+    (vacia ambulancia1)
     (enamb ambulancia1 l1)
     (descargado paciente1)
     (descargado paciente2)

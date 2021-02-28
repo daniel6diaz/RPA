@@ -9,18 +9,21 @@
     (enamb ?amb - ambulancia ?loc - localizacion)
     (dentroambulancia ?pct - paciente)
     (descargado ?pct - paciente)
+    (vacia ?amb - ambulancia)
 )
 (:action subirpaciente
     :parameters (?amb - ambulancia ?pct - paciente ?loc - localizacion)
     :precondition 
     (and 
         (descargado ?pct)
+        (vacia ?amb)
         (enloc ?pct ?loc)
         (enamb ?amb ?loc)
     )
     :effect 
     (and 
         (not (descargado ?pct))
+        (not (vacia ?amb))
         (not(enloc ?pct ?loc))
         (dentroambulancia ?pct)  
     )
@@ -35,6 +38,7 @@
     )
     :effect 
     (and 
+        (vacia ?amb)
         (descargado ?pct)
         (enloc ?pct ?loc)
         (not(dentroambulancia ?pct))    

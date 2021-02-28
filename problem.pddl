@@ -1,10 +1,10 @@
-(define (problem problemaambulancia) (:domain dominioambulancia)
+(define (problem problemaambulancia) 
+(:domain dominioambulancia)
 (:objects 
     ambulancia1 - ambulancia
     paciente1 paciente2 - paciente
     l1 l2 l3 l4 - localizacion
 )
-
 (:init
     (enamb ambulancia1 l1)
     (descargado paciente1)
@@ -17,15 +17,13 @@
     (camino l4 l2)
     (camino l4 l3)
     (camino l3 l4)
-    
-
 )
-
-(:goal (and
+(:goal 
+(and
     (enloc paciente1 l1)
     (descargado paciente1)
     (enloc paciente2 l1)
     (descargado paciente2)
-))
-
+)
+)
 )
